@@ -34,25 +34,24 @@
         <input type="text" id="usuario" name="usuario" required><br>
 
         <label for="senha">Senha:</label>
-        <input type="senha" id="senha" name="senha" required><br>
-        <input type="button" id="mostrarSenha" value="show" class="button" />
-
+        <input type="password" id="password" name="senha" required><br>
         <button type="button" onclick="tentarLogin()">Entrar</button>
+        <input type="button" id="showPassword" value="Mostrar" class="button" />
     </form>
 
     <script>
-        $(document).ready(function(){
-  $('#mostrarSenha').on('click', function(){
+       $(document).ready(function(){
+  $('#showPassword').on('click', function(){
     
-    var senhaCampo = $('#senha');
-    var senhaCampoTipo = senhaCampo.attr('type');
-    if(senhaCampoTipo == 'senha')
+    var passwordField = $('#password');
+    var passwordFieldType = passwordField.attr('type');
+    if(passwordFieldType == 'password')
     {
-        senhaCampo.attr('type', 'text');
-        $(this).val('Esconder');
+        passwordField.attr('type', 'text');
+        $(this).val('Hide');
     } else {
-        SenhaCampo.attr('type', 'senha');
-        $(this).val('Mostrar');
+        passwordField.attr('type', 'password');
+        $(this).val('Show');
     }
   });
 });
