@@ -42,10 +42,10 @@
     <script>
       function mostrarSenha() {
 
-    var tipo = document.getElementById("senha");
+    var tipo = document.getElementById("password");
     var btn = document.getElementById("btn-ocultar"); 
         if(tipo.type == "password" ){
-            tipo.type = "name";
+            tipo.type = "text";
             btn.innerText = "Ocultar senha";
         }else{
             tipo.type = "password";
