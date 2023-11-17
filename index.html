@@ -35,11 +35,27 @@
 
         <label for="senha">Senha:</label>
         <input type="senha" id="senha" name="senha" required><br>
+        <input type="button" id="mostrarSenha" value="show" class="button" />
 
         <button type="button" onclick="tentarLogin()">Entrar</button>
     </form>
 
     <script>
+        $(document).ready(function(){
+  $('#mostrarSenha').on('click', function(){
+    
+    var senhaCampo = $('#senha');
+    var senhaCampoTipo = senhaCampo.attr('type');
+    if(senhaCampoTipo == 'senha')
+    {
+        senhaCampo.attr('type', 'text');
+        $(this).val('Esconder');
+    } else {
+        SenhaCampo.attr('type', 'senha');
+        $(this).val('Mostrar');
+    }
+  });
+});
         function tentarLogin() {
             var usuario = document.getElementById('usuario').value;
             var senha = document.getElementById('senha').value;
