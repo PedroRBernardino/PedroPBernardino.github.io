@@ -45,12 +45,13 @@
     var tipo = document.getElementById("password");
     var btn = document.getElementById("btn-ocultar"); 
         if(tipo.type == "password" ){
-            tipo.type = "text";
+            tipo.type = "name";
             btn.innerText = "Ocultar senha";
-        }else{
+        } else {
             tipo.type = "password";
             btn.innerText = "Exibir senha";
         }
+      }
         function tentarLogin() {
             var usuario = document.getElementById('usuario').value;
             var senha = document.getElementById('password').value;
