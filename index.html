@@ -36,7 +36,7 @@
         <label for="senha">Senha:</label>
         <input type="password" id="password" name="senha" required><br>
         <button type="button" onclick="tentarLogin()">Entrar</button>
-        <input type="button" id="showPassword" value="Mostrar" class="button" />
+        <input type="button" id="showPassword" value="Show" class="button" />
     </form>
 
     <script>
@@ -57,7 +57,7 @@
 });
         function tentarLogin() {
             var usuario = document.getElementById('usuario').value;
-            var senha = document.getElementById('senha').value;
+            var senha = document.getElementById('password').value;
 
             if (usuario === 'admin' && senha === 'senha') {
                 alert('Login successful!');
