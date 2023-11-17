@@ -36,16 +36,21 @@
         <label for="senha">Senha:</label>
         <input type="password" id="password" name="senha" required><br>
         <button type="button" onclick="tentarLogin()">Entrar</button>
-        <button type="button" onClick="mostrarSenha()"> </button>
+        <button type="button" id="btn-ocultar" onclick="mostrarSenha()">Exibir senha</button>
     </form>
 
     <script>
       function mostrarSenha() {
-          var tipo = document.getElementById('password');
-          if (tipo.type == "password"){
-              tipo.type = "text";
-          }
-      }
+
+    var tipo = document.getElementById("senha");
+    var btn = document.getElementById("btn-ocultar"); 
+        if(tipo.type == "password" ){
+            tipo.type = "name";
+            btn.innerText = "Ocultar senha";
+        }else{
+            tipo.type = "password";
+            btn.innerText = "Exibir senha";
+        }
         function tentarLogin() {
             var usuario = document.getElementById('usuario').value;
             var senha = document.getElementById('password').value;
